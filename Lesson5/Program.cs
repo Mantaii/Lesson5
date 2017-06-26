@@ -19,6 +19,7 @@ namespace Lesson5
             myLastName = Console.ReadLine();
 
             Console.WriteLine("Hello, " + myFirstName + " " + myLastName);
+            Console.ReadLine();
         }
     }
 }
