@@ -18,7 +18,7 @@ namespace Lesson5
             Console.Write("Type your last name:");
             myLastName = Console.ReadLine();
 
-            Console.WriteLine("Helo, " + myFirstName + " " + myLastName);
+            Console.WriteLine("Hello, " + myFirstName + " " + myLastName);
         }
     }
 }
