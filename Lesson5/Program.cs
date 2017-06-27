@@ -12,11 +12,11 @@ namespace Lesson5
         {
             Console.WriteLine("What is your name?");
             Console.Write("Type your first name:");
-            string myFirstName = Console.ReadLine();
 
-            string myLastName;
+            string myFirstName = Console.ReadLine();
+            
             Console.Write("Type your last name:");
-            myLastName = Console.ReadLine();
+            string myLastName = Console.ReadLine();
 
             Console.WriteLine("Hello, " + myFirstName + " " + myLastName);
             Console.ReadLine();
