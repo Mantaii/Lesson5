@@ -21,42 +21,34 @@ namespace HelperMethods
             Console.Write("In what city were you born?");
             string city = Console.ReadLine();
 
-            char[] firstNameArray = firstName.ToCharArray();
-            Array.Reverse(firstNameArray);
+                
+            DisplayResult(ReverseString(firstName),
+                 ReverseString(lastName),
+                 ReverseString(city));
 
-            char[] lastNameArray = lastName.ToCharArray();
-            Array.Reverse(lastNameArray);
-
-            char[] cityArray = city.ToCharArray();
-            Array.Reverse(cityArray);
-
-            string result = "";
-
-            foreach (char item in firstNameArray)
-            {
-                result += item;
-            }
-
-            result += " ";
-
-            foreach (char item in lastNameArray)
-            {
-                result += item;
-            }
-
-            result += " ";
-
-            foreach (char item in cityArray)
-            {
-                result += item;
-            }
-
-            Console.WriteLine("Results: " + result);
-
-            Console.ReadLine();
+      
+             Console.ReadLine();
 
         }
 
+        private static string ReverseString(string message)
+        {
+                      
+            char[] messageArray = message.ToCharArray();
+            Array.Reverse(messageArray);
+
+            return String.Concat(messageArray);
+        }
+
+        private static void DisplayResult(string reversedFirstName, string reversedLastName, string reversedCity)
+        {
+            Console.WriteLine("Results: ");
+            Console.Write(String.Format("{0} {1} {2}", 
+                reversedFirstName, 
+                reversedLastName, 
+                reversedCity));
+
+        }
 
     }
 }
